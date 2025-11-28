@@ -7,12 +7,12 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: product-service
-          uri: lb://product-service
+        - id: MovieService
+          uri: lb://MovieService
           predicates:
-            - Path=/product/**
+            - Path=/movies/**
 
-        - id: customer-service
-          uri: lb://customer-service
+        - id: RecommendationService
+          uri: lb://RecommendationService
           predicates:
-            - Path=/customer/**
+            - Path=/recommendation/**
